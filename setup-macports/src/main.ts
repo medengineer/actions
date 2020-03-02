@@ -22,7 +22,7 @@ if (!tempDirectory) {
   tempDirectory = path.join(baseLocation, "runner", "temp");
 }
 
-async function getMacPorts(versionSpec: string = "2.5.4") {
+async function getMacPorts(versionSpec: string = "2.6.2") {
   // check cache
   let toolPath: String;
   toolPath = tc.find("macports", versionSpec);
@@ -32,7 +32,7 @@ async function getMacPorts(versionSpec: string = "2.5.4") {
     // Download, install, cache
     core.debug("MacPorts not found in tool-cache");
 
-    let filename = "MacPorts-" + versionSpec + "-10.14-Mojave.pkg";
+    let filename = "MacPorts-" + versionSpec + "-10.15-Catalina.pkg";
     let downloadUrl = "https://distfiles.macports.org/MacPorts/" + filename;
 
     let downloadPath: string = "";
